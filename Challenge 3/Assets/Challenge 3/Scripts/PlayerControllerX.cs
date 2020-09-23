@@ -58,6 +58,11 @@ public class PlayerControllerX : MonoBehaviour
         {
             lowEnough = false;
         }
+
+        if (transform.position.y >= 15)
+        {
+            transform.position = new Vector3(transform.position.x, 15f, transform.position.z);
+        }
     }
 
     private void OnCollisionEnter(Collision other)
